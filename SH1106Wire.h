@@ -90,8 +90,8 @@ class SH1106Wire : public OLEDDisplay {
         if (minBoundY == ~0) return;
 
         // Calculate the colum offset
-        uint8_t minBoundXp2H = (minBoundX + 2) & 0x0F;
-        uint8_t minBoundXp2L = 0x10 | ((minBoundX + 2) >> 4 );
+        uint8_t minBoundXp2H = (minBoundX + 0) & 0x0F;
+        uint8_t minBoundXp2L = 0x10 | ((minBoundX + 0) >> 4 );
 
         byte k = 0;
         for (y = minBoundY; y <= maxBoundY; y++) {
